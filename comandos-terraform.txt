@@ -1,0 +1,25 @@
+COMANDOS TERRAFORM
+
+terraform providers -> mostrar os providers que estão mencionados no meu código
+terraform init -> para iniciar o projeto do terraform dentro da pasta atual
+
+IDENTAR O CÓDIGO AUTOMATICAMENTE
+terraform fmt -> identa o código
+terraform fmt -check -> mostrar qual arquivo precisa ser identado
+terraform fmt -diff -> mostrar qual será a alteração no código e já altera
+
+terraform validate -> valida se a configuração do seu código está ok 
+terraform plan -> mostra todo plano que o terraform irá fazer, mas não faz nenhuma alteração 
+terraform plan -out nome-do-arquivo -> salvar o plano do terraform num arquivo 
+terraform plan -out plan.out -> salvando o plano no arquivo plan.out 
+terraform show plan.out -> ler o arquivo gerado 
+terraform apply -> criar o bucket na aws 
+terraform apply -auto-approve -> cria o plano sem perguntar 
+terraform apply plan.out -> criando um plano a partir de um arquivo gerado
+terraform apply -destroy -> destruir o plano criado anteriormente 
+terraform destroy -> destruir o plano criado anteriormente 
+terraform plan -out plan.out -destroy -> criando um plano para o destroy
+
+terraform output -> ver os outputs pela linha de comando
+terraform output -raw storage_account_id -> ver o output do arquivo output.tf
+
