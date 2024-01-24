@@ -12,7 +12,8 @@ terraform validate -> valida se a configuração do seu código está ok
 terraform plan -> mostra todo plano que o terraform irá fazer, mas não faz nenhuma alteração 
 terraform plan -out nome-do-arquivo -> salvar o plano do terraform num arquivo 
 terraform plan -out plan.out -> salvando o plano no arquivo plan.out 
-terraform show plan.out -> ler o arquivo gerado 
+terraform show plan.out -> ler o plano gerado 
+terraform show -> ver o state gerado 
 terraform apply -> criar o bucket na aws 
 terraform apply -auto-approve -> cria o plano sem perguntar 
 terraform apply plan.out -> criando um plano a partir de um arquivo gerado
@@ -22,4 +23,17 @@ terraform plan -out plan.out -destroy -> criando um plano para o destroy
 
 terraform output -> ver os outputs pela linha de comando
 terraform output -raw storage_account_id -> ver o output do arquivo output.tf
+
+terraform state list -> listar qual recurso está no meu state 
+terraform state mv aws_s3_bucket.bucket_1 aws_s3_bucket.bucket_um -> renomear recurso do s3 
+terraform state pull > state.tfstate -> baixar o state que está no s3 
+terraform state push -force state.tfstate -> fazer o push desse state para o s3 
+terraform providers -> ver o provider que está no terraform 
+terraform state replace-provider registry.terraform.io/hashicorp/aws registry.terraform.io/hashicorp/aws-v2 -> mudar o provider do terraform
+terraform state show aws_s3_bucket.bucket_1 -> ver o state desse recurso 
+terraform state rm aws_s3_bucket.bucket_1 -> remover esse recurso 
+terraform import aws_s3_bucket.bucket_1 guilherme-terraform-commands-1 -> importar um recurso que está na aws para o state do terraform
+terraform refresh -> serve para quando adicionar recurso pela plataforma e atualizar no terraform
+terraform force-unlock id-do-state-que-ficou-bloqueado -> desbloquear um state 
+
 
