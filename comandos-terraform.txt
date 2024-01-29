@@ -35,5 +35,6 @@ terraform state rm aws_s3_bucket.bucket_1 -> remover esse recurso
 terraform import aws_s3_bucket.bucket_1 guilherme-terraform-commands-1 -> importar um recurso que está na aws para o state do terraform
 terraform refresh -> serve para quando adicionar recurso pela plataforma e atualizar no terraform
 terraform force-unlock id-do-state-que-ficou-bloqueado -> desbloquear um state 
+terraform get -> faz download dos modulos mencionados no código
 
 
