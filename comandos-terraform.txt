@@ -37,4 +37,20 @@ terraform refresh -> serve para quando adicionar recurso pela plataforma e atual
 terraform force-unlock id-do-state-que-ficou-bloqueado -> desbloquear um state 
 terraform get -> faz download dos modulos mencionados no código
 
+====================================================
+terraform workspace --help 
+    delete -> delete a workspace
+    list   -> list workspace
+    new    -> create a new workspace
+    select -> select a workspace
+    show   -> show the name of the current workspace
+
+terraform workspace list -> listar o workspace
+terraform workspace new dev -> criando novo workspace de dev 
+====================================================
+
+Target e replace
+terraform plan -target aws_key_pair.key -out plan.out -> criando apenas o aws_key_pair.key
+terraform plan -replace aws_instance.vm -out plan.out
+
 
