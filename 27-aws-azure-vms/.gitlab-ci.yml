@@ -35,7 +35,7 @@ apply:
   when: manual
 
 destroy:
-  extends: .tamplate
+  extends: .template
   stage: destroy
   script:
   - terraform destroy -auto-approve
